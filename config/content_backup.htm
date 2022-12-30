@@ -61,7 +61,8 @@ brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
 </section>
 <section class="post-info">
 <div class="post-share"></div>
-</section><h2>W4-5</h2>
+</section>
+<h2>W4-5</h2>
 <p>心得:一開始聽老師解說一知半解，在開頭就卡關了。在同學的教導幫助下有慢慢跟上大家的進展。</p>
 <p>1.(登入 stud.cycu.org)利用 @nfu 電子郵箱收到的帳號與密碼, 登入 stud.cycu.org: 在命令列視窗, 以 ssh cad學號@stud.cycu.org , 輸入對應密後, 可以登入系統</p>
 <p>2.請到 excel 檔案 查詢 stud.cycu.org 中與帳號對應的近端 (給 127.0.0.1 使用) 與遠端 (給 stud.cycu.org) 埠號</p>
@@ -70,9 +71,11 @@ brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
 <p>5.利用 sftp 進入 stud.cycu.org 後, cd 到 .ssh, 以 get id_rsa.pub 將 public key 取至 Windows 後, 送到 Github -&gt; Settings -&gt; SSH and GPG 設定區, 透過 new key 登錄公鑰.</p>
 <p>6.接下來要下載 config 設定檔案, 以 sftp 放入 stud.cycu.org 主機的 .ssh 目錄中.</p>
 <p>7.上面的 config 主要設定 SSH 協定對 github.com 連線時的代理主機, 但取下 cmsimde 子模組使用的是 https, 因此執行下列 git clone 時將會同時用到 SSH 與 https 協定, 因此除了 .ssh 目錄下要有 config 設定檔案外, 也必須同時在 .gitconfig 檔案中設定 http.proxy, 也就是以 git config --global http.proxy http://p42.cycu.org:3128 設定供 https 連線使用的代理主機, 並且以 git config --global user.name 以及 git config --global user.email 設定提交用的身分註記.</p>
-<p>8.在 stud.cycu.org 中, 以 git clone --recurse-submodules git@github.com:mdecad2022/site-個人github帳號.git 取下個人倉儲.</p><h2>W6</h2>
+<p>8.在 stud.cycu.org 中, 以 git clone --recurse-submodules git@github.com:mdecad2022/site-個人github帳號.git 取下個人倉儲.</p>
+<h2>W6</h2>
 <p>1.零件一</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="/downloads/123.mp4" title="YouTube video player" width="560"></iframe></p><h2>W7</h2>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="/downloads/123.mp4" title="YouTube video player" width="560"></iframe></p>
+<h2>W7</h2>
 <p>心得:在處理執行python3 server.py不知什麼原因無法使用動態網站，後續無法順利push。</p>
 <p>9.假如先前使用 git clone 並沒有取下 cmsimde 子模組內容, 只要在設定 https 代理主機後, 進入倉儲根目錄執行 git submodule update --init --recursive 即可取下子模組內容.</p>
 <p>10.接著下載 server.py, 在 Windows 編輯 server.py, 將個人分配到的 9xxxx 埠號填入後存檔, 以 sftp 放入上列取下的倉儲根目錄.</p>
@@ -80,12 +83,16 @@ brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
 <p>12.設定完成後, 各學員將會有一個廣域網路上的動態網站 (取代 Replit 上的動態網站), https://stud.cycu.org:8xxxx 看到個人的動態網站.</p>
 <p>13.動態網站改版後, 轉為靜態, 必須透過 source acp 以 SSH 將改版內容送回 github. (必須利用 chmod u+x acp 將 acp 檔案屬性改為對 user 可以 execute (也就是 x 屬性).</p>
 <p>14.執行 source acp "提交字串" 之前必須要 git config --global user.name, git config --global user.email, git config --global http.proxy</p>
-<p>15.上述採用指令模式對 server sftp 也可以利用 Filezilla portable, 以圖形介面完成. 而 ssh 也可以透過 putty.exe 執行遠端登入.</p><h2>W8</h2>
+<p>15.上述採用指令模式對 server sftp 也可以利用 Filezilla portable, 以圖形介面完成. 而 ssh 也可以透過 putty.exe 執行遠端登入.</p>
+<h2>W8</h2>
 <h2>W9</h2>
 <h2>W10</h2>
-<h2>W11</h2>
+<p><span>HW2.已知 block.prt 中 p8=59, p9=44, 請利用網際表單, 將 p8, p9 都改為 50 之後, 在瀏覽中提供新的 block_new.prt 檔案下載, 並直接在網頁上展示該零件的 STL 格式檔案.</span></p>
+<p><span><img alt="" height="1300" src="/images/未命名.png" width="1920"/></span></p><h2>W11</h2>
 <h2>W12</h2>
-<p>心得:要download時Fz無法啟用，卸載重新安裝就沒事了。</p><h2>W13</h2>
+<p>心得:要download時Fz無法啟用，卸載重新安裝就沒事了。</p>
+<h2>W13</h2>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="/downloads/pust影片1.mp4" title="YouTube video player" width="560"></iframe></p>
 <h2>W14</h2>
 <!-- 導入 brython 程式庫 -->
 <p>
