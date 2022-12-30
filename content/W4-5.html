@@ -142,7 +142,14 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">W3 << <a href='W3.html'>Previous</a> <a href='W6.html'>Next</a> >> W6<br /><h1>W4-5</h1>
-<br />W3 << <a href='W3.html'>Previous</a> <a href='W6.html'>Next</a> >> W6</div>
+<p>1.(登入 stud.cycu.org)利用 @nfu 電子郵箱收到的帳號與密碼, 登入 stud.cycu.org: 在命令列視窗, 以 ssh cad學號@stud.cycu.org , 輸入對應密後, 可以登入系統</p>
+<p>2.請到 excel 檔案 查詢 stud.cycu.org 中與帳號對應的近端 (給 127.0.0.1 使用) 與遠端 (給 stud.cycu.org) 埠號</p>
+<p>3.(透過 sftp 建立近端目錄與 stud.cycu.org 帳號下的對應) 開啟另一個命令列, 執行 sftp 帳號@stud.cycu.org 輸入對應密碼, 即可建立近端目錄與遠端系統目錄間的對應.</p>
+<p>4.與在近端(Windows)利用 SSH 建立 public/private keys 流程相同, 必須在 Linux (Ubuntu) 利用 ssh-keygen 建立 keys. 所產生的 id_rsa 為 private key, 而 id_rsa.pub 為 public key, 都位於 .ssh 目錄下.</p>
+<p>5.利用 sftp 進入 stud.cycu.org 後, cd 到 .ssh, 以 get id_rsa.pub 將 public key 取至 Windows 後, 送到 Github -&gt; Settings -&gt; SSH and GPG 設定區, 透過 new key 登錄公鑰.</p>
+<p>6.接下來要下載 config 設定檔案, 以 sftp 放入 stud.cycu.org 主機的 .ssh 目錄中.</p>
+<p>7.上面的 config 主要設定 SSH 協定對 github.com 連線時的代理主機, 但取下 cmsimde 子模組使用的是 https, 因此執行下列 git clone 時將會同時用到 SSH 與 https 協定, 因此除了 .ssh 目錄下要有 config 設定檔案外, 也必須同時在 .gitconfig 檔案中設定 http.proxy, 也就是以 git config --global http.proxy http://p42.cycu.org:3128 設定供 https 連線使用的代理主機, 並且以 git config --global user.name 以及 git config --global user.email 設定提交用的身分註記.</p>
+<p>8.在 stud.cycu.org 中, 以 git clone --recurse-submodules git@github.com:mdecad2022/site-個人github帳號.git 取下個人倉儲.</p><br />W3 << <a href='W3.html'>Previous</a> <a href='W6.html'>Next</a> >> W6</div>
         
     <!-- footer -->
       <div class="container">
