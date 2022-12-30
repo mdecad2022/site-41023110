@@ -150,7 +150,8 @@ img.add_border {
 <p>5.利用 sftp 進入 stud.cycu.org 後, cd 到 .ssh, 以 get id_rsa.pub 將 public key 取至 Windows 後, 送到 Github -&gt; Settings -&gt; SSH and GPG 設定區, 透過 new key 登錄公鑰.</p>
 <p>6.接下來要下載 config 設定檔案, 以 sftp 放入 stud.cycu.org 主機的 .ssh 目錄中.</p>
 <p>7.上面的 config 主要設定 SSH 協定對 github.com 連線時的代理主機, 但取下 cmsimde 子模組使用的是 https, 因此執行下列 git clone 時將會同時用到 SSH 與 https 協定, 因此除了 .ssh 目錄下要有 config 設定檔案外, 也必須同時在 .gitconfig 檔案中設定 http.proxy, 也就是以 git config --global http.proxy http://p42.cycu.org:3128 設定供 https 連線使用的代理主機, 並且以 git config --global user.name 以及 git config --global user.email 設定提交用的身分註記.</p>
-<p>8.在 stud.cycu.org 中, 以 git clone --recurse-submodules git@github.com:mdecad2022/site-個人github帳號.git 取下個人倉儲.</p><br />W3 << <a href='W3.html'>Previous</a> <a href='W6.html'>Next</a> >> W6</div>
+<p>8.在 stud.cycu.org 中, 以 git clone --recurse-submodules git@github.com:mdecad2022/site-個人github帳號.git 取下個人倉儲.</p>
+<br />W3 << <a href='W3.html'>Previous</a> <a href='W6.html'>Next</a> >> W6</div>
         
     <!-- footer -->
       <div class="container">
